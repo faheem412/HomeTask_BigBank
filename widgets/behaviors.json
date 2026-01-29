@@ -1,1 +1,1 @@
-{"total":0,"items":[]}
+{"total":2,"items":[{"uid":"930f8bf964481d8b6aeb8d560333903b","name":"Bigbank Loan Calculator","statistic":{"failed":3,"broken":0,"skipped":0,"passed":0,"unknown":0,"total":3}},{"uid":"0cd7f75f5edff437e44ba2865eed031b","name":"Bigbank API","statistic":{"failed":2,"broken":0,"skipped":0,"passed":1,"unknown":0,"total":3}}]}

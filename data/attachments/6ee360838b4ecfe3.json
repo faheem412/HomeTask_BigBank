@@ -1,0 +1,1 @@
+[{"keyword":"type","dataPath":".amount","schemaPath":"#/properties/amount/type","params":{"type":"number"},"message":"should be number"}]

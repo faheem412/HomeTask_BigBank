@@ -1,0 +1,1 @@
+[{"keyword":"type","dataPath":".maturity","schemaPath":"#/properties/maturity/type","params":{"type":"number"},"message":"should be number"}]
