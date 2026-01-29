@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BigBank_LoanCalculator_Test_Suite">
+
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
+
+    <test name="API_Tests">
+        <classes>
+            <class name="org.apitest.ApiPositiveTests"></class>
+            <class name="org.apitest.ApiNegativeTests"></class>
+            <class name="org.apitest.ApiBoundaryTests"></class>
+        </classes>
+</test>
+    <test name="UI_Tests">
+        <classes>
+            <class name="org.uitest.PositiveTests"/>
+            <class name="org.uitest.NegativeTests"/>
+            <class name="org.uitest.BoundaryValueTests"/>
+        </classes>
+    </test>
+</suite>
