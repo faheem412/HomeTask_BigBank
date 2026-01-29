@@ -4,22 +4,24 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
+import static java.lang.System.getProperties;
+
 public class ReadConfig {
 
     private ReadConfig(){}
 
-    private static final Properties properties = new Properties();
+    private static  Properties properties;
 
     static {
-        try (InputStream input = ReadConfig.class.getClassLoader()
-                .getResourceAsStream("Config.properties")) {
-            if (input != null) {
-                properties.load(input);
-            } else {
-                throw new RuntimeException("Config.properties not found in classpath");
+        properties = new Properties();
+        try (InputStream input = ReadConfig.class.getClassLoader().getResourceAsStream("config.properties")) {
+            if (input == null) {
+                throw new RuntimeException("Sorry, unable to find config.properties in src/test/resources");
             }
-        } catch (IOException e) {
-            throw new RuntimeException("Failed to load Config.properties", e);
+            properties.load(input);
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            throw new RuntimeException("Failed to load configuration file.");
         }
     }
 

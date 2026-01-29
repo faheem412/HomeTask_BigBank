@@ -14,13 +14,11 @@ public class BaseApiTest {
     protected APIRequestContext apiContext;
     protected CalculateApi calculateApi;
 
-    private static final String BASE_URI = ReadConfig.getApiBaseURI();
     @BeforeClass
     public void setupApi() {
         playwright = Playwright.create();
         apiContext = playwright.request().newContext(
-                new APIRequest.NewContextOptions()
-                        .setBaseURL(BASE_URI)
+                new APIRequest.NewContextOptions().setBaseURL(ReadConfig.getApiBaseURI())
                         .setExtraHTTPHeaders(java.util.Map.of(
                                 "Content-Type", "application/json",
                                 "Accept", "application/json"
